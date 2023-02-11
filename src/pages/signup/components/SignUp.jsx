@@ -1,11 +1,11 @@
 
 
-export const Product = (props)=> {
+export const Signup = (props)=> {
 
 
     return (
       <div>
-         <p>product</p>
+         <p>Sign up</p>
           </div>
   
     )

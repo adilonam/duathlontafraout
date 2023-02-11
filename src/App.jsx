@@ -14,16 +14,16 @@ import "primeicons/primeicons.css";  //icons
 
 import { Routes, Route, useNavigate } from 'react-router-dom'
 import { Home } from './pages/home/components/Home';
-import { Product } from './pages/product/components/Product';
+import { Signup } from './pages/signup/components/SignUp';
 import { Copyright } from './copyright/components/Copyright';
 
 function App() {
   const urls = [
     '/',
-    '/product'
+    '/inscrire'
   ]
   const [activeIndex, setActiveIndex] = useState(1);
-  const updates = useRef(0);
+  const updates = useRef(0);//because there is a bug
   const navigate = useNavigate()
   
   useEffect(() => {
@@ -44,7 +44,7 @@ function App() {
 <div className='container'>
     <Routes>
 <Route path={urls[0]} element={<Home></Home>}></Route>
-<Route path={urls[1]} element={<Product></Product>}></Route>
+<Route path={urls[1]} element={<Signup></Signup>}></Route>
     </Routes>
     </div>
 
