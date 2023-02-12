@@ -14,34 +14,33 @@ import "primeicons/primeicons.css";  //icons
 
 import { Routes, Route, useNavigate } from 'react-router-dom'
 import { Home } from './pages/home/components/Home';
-import { Signup } from './pages/signup/components/SignUp';
+import { SignUp } from './pages/signup/components/SignUp';
 import { Copyright } from './copyright/components/Copyright';
 
 
 import {  createUserWithEmailAndPassword } from "firebase/auth";
 
 import { auth } from './firebase';
+import { SignIn } from './pages/signin/components/SignIn';
 
 function App() {
   const urls = [
     '/',
-    '/inscrire'
+    '/inscrire',
+    '/connecter'
   ]
-  const [activeIndex, setActiveIndex] = useState(1);
-  const updates = useRef(0);//because there is a bug
-  const navigate = useNavigate()
-  
-  
 
+  
 
 
 
   return (<>
-    <NavBar urls={urls} setActiveIndex={setActiveIndex}></NavBar>
+    <NavBar urls={urls} ></NavBar>
 <div className='container'>
     <Routes>
 <Route path={urls[0]} element={<Home></Home>}></Route>
-<Route path={urls[1]} element={<Signup></Signup>}></Route>
+<Route path={urls[1]} element={<SignUp></SignUp>}></Route>
+<Route path={urls[2]} element={<SignIn></SignIn>}></Route>
     </Routes>
     </div>
 
