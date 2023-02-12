@@ -17,6 +17,11 @@ import { Home } from './pages/home/components/Home';
 import { Signup } from './pages/signup/components/SignUp';
 import { Copyright } from './copyright/components/Copyright';
 
+
+import {  createUserWithEmailAndPassword } from "firebase/auth";
+
+import { auth } from './firebase';
+
 function App() {
   const urls = [
     '/',
@@ -26,21 +31,13 @@ function App() {
   const updates = useRef(0);//because there is a bug
   const navigate = useNavigate()
   
-  useEffect(() => {
-    
-      updates.current +=1 ;
-    
- if(updates.current>=2)   {
-    if(activeIndex>= 1)
-        navigate( urls[activeIndex-1]);
-    
-    
-      }
-}, [activeIndex])
+  
+
+
 
 
   return (<>
-    <NavBar activeIndex={activeIndex} setActiveIndex={setActiveIndex}></NavBar>
+    <NavBar urls={urls} setActiveIndex={setActiveIndex}></NavBar>
 <div className='container'>
     <Routes>
 <Route path={urls[0]} element={<Home></Home>}></Route>

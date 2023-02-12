@@ -1,10 +1,10 @@
 import { useState } from 'react'
 
 
-import { Button } from 'primereact/button';
-import { TabMenu } from 'primereact/tabmenu';
-
-
+import { NavLink } from 'react-router-dom';
+let activeStyle = {
+  textDecoration: "underline",
+};
 export const NavBar = (props)=> {
   
 
@@ -27,10 +27,24 @@ export const NavBar = (props)=> {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
           <li className="nav-item">
-            <a className="nav-link active" aria-current="page" href="#">Home</a>
+          
+            <NavLink
+            to=""
+            className={({ isActive }) =>
+              isActive ? "nav-link active" : "nav-link"
+            }
+          > Home
+          </NavLink>
+
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Link</a>
+          <NavLink
+            to="/inscrire"
+            className={({ isActive }) =>
+              isActive ? "nav-link active" : "nav-link"
+            }
+          > S'inscrire
+          </NavLink>
           </li>
           <li className="nav-item dropdown">
             <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
