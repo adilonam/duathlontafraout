@@ -9,6 +9,8 @@ import { UserService } from "../../../services/UserService";
 import { Divider } from 'primereact/divider';
 import { Button } from 'primereact/button';
 
+import { Link, useNavigate } from 'react-router-dom';
+
 export const SignIn = (props) => {
 
 
@@ -18,14 +20,42 @@ export const SignIn = (props) => {
 
   const ToastLife = 4000
 
-  const submitData = (data) => {
-    userService.creat(data).then((userCredential) => {
 
-      toast.current.show({ severity: 'success', summary: 'Utilisateur créé avec succès', life: ToastLife });
+  const formik = useFormik({
+    initialValues: {
+        email: '',
+        password:''
+    },
+    validate: (data) => {
+        let errors = {};
+
+        // if (!data.value) {
+        //     errors.value = 'Name - Surname is required.';
+        // }
+
+        return errors;
+    },
+    onSubmit: (data) => {
+        data && submitData(data);
+    }
+});
+
+const navigate = useNavigate()
+
+const isFormFieldInvalid = (name) => !!(formik.touched[name] && formik.errors[name]);
+
+const getFormErrorMessage = (name) => {
+    return isFormFieldInvalid(name) ? <small className="p-error">{formik.errors[name]}</small> : <small className="p-error">&nbsp;</small>;
+};
+
+  const submitData = (data) => {
+    userService.signIn( data.email, data.password).then((userCredential) => {
+
+     navigate('/')
     })
       .catch((error) => {
         const errorMessage = error.message;
-        toast.current.show({ severity: 'error', summary: 'Erreur', detail: errorMessage, life: ToastLife });
+        toast.current.show({ severity: 'error', summary: 'Erreur', detail: errorMessage.replace('Firebase:', ''), life: ToastLife });
       });
 
   };
@@ -36,28 +66,45 @@ export const SignIn = (props) => {
 
 
   return (
-    <>
+    <div className="container">
     <div className="row">
         <div className="col">
         <div className="card">
             <div className="flex row md:flex-row">
-                <div className="w-full md:w-5 flex flex-column align-items-center justify-content-center gap-3 py-5  col  ms-4">
+                <form onSubmit={formik.handleSubmit} className="w-full md:w-5 flex flex-column align-items-center justify-content-center gap-3 py-5  col  ms-4">
+
                     <div className="row flex align-items-center gap-2">
                         <label htmlFor="username">email</label>
-                        <InputText id="username" type="text" className="w-full" />
+                        <InputText id="username" type="email" autoComplete="username"
+                         onChange={(e) => {
+                            formik.setFieldValue('email', e.target.value);
+                        }}
+                        value={formik.values.email}
+                        className={classNames({ 'p-invalid': isFormFieldInvalid('email') })}/>
                     </div>
                     <div className="row flex align-items-center gap-2">
                         <label htmlFor="password">Password</label>
-                        <InputText id="password" type="password" className="w-full" />
+                        <Password id="password" type="password" toggleMask  autoComplete="current-password"
+                        onChange={(e) => {
+                            formik.setFieldValue('password', e.target.value);
+                        }}
+                        feedback={false}
+                        value={formik.values.password}
+                        className={classNames({ 'p-invalid': isFormFieldInvalid('password'), "flex-column p-0" :true })}/>
                     </div>
-                    <Button label="Login" icon="pi pi-user" className="w-10rem mt-3"></Button>
-                </div>
+                    <Button label="Login" icon="pi pi-user" type="submit" className="w-10rem mt-3" ></Button>
+                </form>
                 <div className="w-full md:w-2 col">
                     <Divider layout="vertical" className="hidden md:flex"><b>OR</b></Divider>
                  
                 </div>
                 <div className="w-full md:w-5 flex align-items-center justify-content-center py-5 col my-auto me-4 ms-2">
-                    <Button label="Sign Up" icon="pi pi-user-plus" className="p-button-success w-10rem"></Button>
+                <Link
+                to="/inscrire"
+                        className="btn"
+              >  <Button label="Sign Up" icon="pi pi-user-plus" className="p-button-success w-10rem"></Button>
+              </Link>
+                  
                 </div>
             </div>
         </div>
@@ -66,7 +113,7 @@ export const SignIn = (props) => {
     </div>
     
       <Toast ref={toast} />
-    </>
+    </div>
 
   )
 }
