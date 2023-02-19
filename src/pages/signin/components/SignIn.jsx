@@ -1,5 +1,5 @@
 
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { useFormik } from 'formik';
 import { InputText } from "primereact/inputtext";
 import { Toast } from 'primereact/toast';
@@ -14,7 +14,7 @@ import { Link, useNavigate } from 'react-router-dom';
 export const SignIn = (props) => {
 
 
-
+const [loading, setLoading] = useState(false)
   const toast = useRef(null);
   const userService = new UserService()
 
@@ -49,13 +49,17 @@ const getFormErrorMessage = (name) => {
 };
 
   const submitData = (data) => {
+    setLoading(true)
     userService.signIn( data.email, data.password).then((userCredential) => {
 
      navigate('/')
+    
     })
       .catch((error) => {
         const errorMessage = error.message;
         toast.current.show({ severity: 'error', summary: 'Erreur', detail: errorMessage.replace('Firebase:', ''), life: ToastLife });
+      }).finally(()=>{
+        setLoading(false)
       });
 
   };
@@ -92,7 +96,7 @@ const getFormErrorMessage = (name) => {
                         value={formik.values.password}
                         className={classNames({ 'p-invalid': isFormFieldInvalid('password'), "flex-column p-0" :true })}/>
                     </div>
-                    <Button label="Login" icon="pi pi-user" type="submit" className="w-10rem mt-3" ></Button>
+                    <Button loading={loading} label="Login" icon="pi pi-user" type="submit" className="w-10rem mt-3" ></Button>
                 </form>
                 <div className="w-full md:w-2 col">
                     <Divider layout="vertical" className="hidden md:flex"><b>OR</b></Divider>
@@ -102,7 +106,7 @@ const getFormErrorMessage = (name) => {
                 <Link
                 to="/inscrire"
                         className="btn"
-              >  <Button label="Sign Up" icon="pi pi-user-plus" className="p-button-success w-10rem"></Button>
+              >  <Button label="Sign Up"  icon="pi pi-user-plus" className="p-button-success w-10rem"></Button>
               </Link>
                   
                 </div>

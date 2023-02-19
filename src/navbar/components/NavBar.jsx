@@ -49,6 +49,8 @@ export const NavBar = (props) => {
       </NavLink>
 
     </li>
+{!props.user &&(
+<>
     <li className="u-nav-item">
     <NavLink
         to={props.urls[1]}
@@ -66,7 +68,10 @@ export const NavBar = (props) => {
         style={{ padding: "10px 20px" }}>
           Se connecter
       </NavLink>
-      </li></ul>
+      </li></>
+)
+      }
+      </ul>
   </div>
   <div className="u-nav-container-collapse">
     <div className="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
@@ -82,7 +87,10 @@ export const NavBar = (props) => {
         style={{ padding: "10px 20px" }}>
           Home
       </NavLink>
-        </li><li className="u-nav-item">    <NavLink
+        </li>
+        
+        {!props.user &&<>
+        <li className="u-nav-item">    <NavLink
         to={props.urls[1]}
         className="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
        
@@ -96,7 +104,10 @@ export const NavBar = (props) => {
         style={{ padding: "10px 20px" }}>
           Se connecter
       </NavLink>
-          </li></ul>
+          </li>
+          </>
+          }
+          </ul>
       </div>
     </div>
     <div className="u-black u-menu-overlay u-opacity u-opacity-70"></div>

@@ -1,5 +1,5 @@
 
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { useFormik } from 'formik';
 import { InputText } from "primereact/inputtext";
 import { Button } from 'primereact/button';
@@ -13,10 +13,11 @@ import { useNavigate } from "react-router-dom";
 export const SignUp = (props) => {
   const toast = useRef(null);
   const userService = new UserService()
-
+  const [loading, setLoading] = useState(false)
   const ToastLife = 4000
   const navigate = useNavigate()
   const submitData = (data) => {
+    setLoading(true)
     userService.creat(data).then((userCredential) => {
       navigate('/');
 
@@ -24,6 +25,8 @@ export const SignUp = (props) => {
       .catch((error) => {
         const errorMessage = error.message;
         toast.current.show({ severity: 'error', summary: 'Erreur', detail: errorMessage.replace('Firebase:', ''), life: ToastLife });
+      }).finally(()=>{
+        setLoading(false)
       });
 
   };
@@ -146,7 +149,7 @@ export const SignUp = (props) => {
           
         
           </div>
-          <Button type="submit" label="Inscription" className="mt-2 mx-auto d-block p-button-success p-button-rounded" icon="pi pi-plus-circle" />
+          <Button type="submit" label="Inscription" className="mt-2 mx-auto d-block p-button-success p-button-rounded" icon="pi pi-plus-circle"   loading={loading}/>
         </form>
       </div>
       <Toast ref={toast} />

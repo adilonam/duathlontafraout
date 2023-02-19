@@ -52,7 +52,7 @@ export const Home = (props)=> {
           <div className="u-repeater u-repeater-1">
             <div className="u-container-style u-list-item u-repeater-item u-video-cover u-white u-list-item-1">
               <div className="u-container-layout u-similar-container u-valign-top u-container-layout-1">
-                <img alt="" className="u-expanded-width u-image u-image-default u-image-1" data-image-width="1380" data-image-height="920" src="/images/fg.jpg"/>
+                <img alt="" className="u-expanded-width u-image u-image-default u-image-1" data-image-width="1380" data-image-height="920" src="/images/duathlon-13.jpg"/>
                 <h3 className="u-custom-font u-font-oswald u-text u-text-default u-text-1">Duathlon Full</h3>
                 <div className="u-text u-text-default u-text-2">
                     <ul>
@@ -66,7 +66,7 @@ export const Home = (props)=> {
             </div>
             <div className="u-container-style u-list-item u-repeater-item u-white u-list-item-2">
               <div className="u-container-layout u-similar-container u-valign-top u-container-layout-2">
-                <img alt="" className="u-expanded-width u-image u-image-default u-image-2" data-image-width="1380" data-image-height="920" src="/images/duathlon-3.jpg"/>
+                <img alt="" className="u-expanded-width u-image u-image-default u-image-2" data-image-width="1380" data-image-height="920" src="/images/duathlon-14.jpg"/>
                 <h3 className="u-custom-font u-font-oswald u-text u-text-default u-text-3">Duathlon Sprint</h3>
                 <div className="u-text u-text-default u-text-4">   <ul>
 <li>Duathlon : 5 km course, 24 km vélo, 2.5 km course</li>
@@ -78,7 +78,7 @@ export const Home = (props)=> {
             </div>
             <div className="u-container-style u-list-item u-repeater-item u-video-cover u-white u-list-item-3">
               <div className="u-container-layout u-similar-container u-valign-top u-container-layout-3">
-                <img alt="" className="u-expanded-width u-image u-image-default u-image-3" data-image-width="1380" data-image-height="920" src="/images/duathlon-4.jpg"/>
+                <img alt="" className="u-expanded-width u-image u-image-default u-image-3" data-image-width="1380" data-image-height="920" src="/images/duathlon-15.jpg"/>
                 <h3 className="u-custom-font u-font-oswald u-text u-text-default u-text-5">Duathlon Enfants</h3>
                 <div className="u-text u-text-default u-text-6">
                 <ul>
@@ -107,7 +107,7 @@ export const Home = (props)=> {
 	C29.1,15.5,15.5,29.1,7.6,45.9z M80,0c-2.6,0-5.1,0.1-7.6,0.4l-72,72C0.1,74.9,0,77.4,0,80c0,0.1,0,0.2,0,0.2L80.2,0
 	C80.2,0,80.1,0,80,0z"></path></svg>
         </div>
-        <img className="u-align-left u-image u-image-default u-image-1" data-image-width="1380" data-image-height="920" src="/images/duathlon-6.jpg"/>
+        <img className="u-align-left u-image u-image-default u-image-1" data-image-width="1380" data-image-height="920" src="/images/duathlon-16.jpg"/>
         <div className="u-align-left u-container-align-left u-container-style u-group u-shape-rectangle u-white u-group-1">
           <div className="u-container-layout u-valign-middle u-container-layout-1">
             <h3 className="u-align-left u-text u-text-palette-4-base u-text-2">Tarif d'inscription :</h3>
@@ -130,7 +130,7 @@ export const Home = (props)=> {
     <section className="u-clearfix u-grey-5 u-section-6" id="carousel_9a91">
       <div className="u-expanded-width u-palette-4-base u-shape u-shape-rectangle u-shape-1"></div>
       <div className="u-shape u-shape-rectangle u-white u-shape-2"></div>
-      <img className="u-image u-image-1" src="/images/duathlon-5.jpg" data-image-width="1000" data-image-height="958"/>
+      <img className="u-image u-image-1" src="/images/duathlon-17.jpg" data-image-width="1000" data-image-height="958"/>
       <div className="u-container-style u-group u-shape-rectangle u-white u-group-1">
         <div className="u-container-layout u-container-layout-1">
           <h2 className="u-text u-text-1"> Mission, Vision, et Valeurs </h2>
