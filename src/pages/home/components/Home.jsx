@@ -1,14 +1,21 @@
 
 import { Carousel } from 'primereact/carousel';
 import { Button } from 'primereact/button';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import '../assets/home.css'  
-
+import { firestore } from '../../../firebase';
 import { NavLink } from 'react-router-dom';
+import { doc, setDoc } from 'firebase/firestore';
+import { set } from 'firebase/database';
  
 export const Home = (props)=> {
  
  
+useEffect(() => {
+ 
+
+
+}, [])
 
 
 

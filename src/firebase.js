@@ -16,7 +16,6 @@ const firebaseConfig = {
   messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
   appId: import.meta.env.VITE_APPID,
   measurementId:import.meta.env.VITE_MEASUREMENTID,
-  databaseURL:import.meta.env.VITE_DATABASEURL
 };
 
 
@@ -25,5 +24,5 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 export const auth = getAuth(app);
-export const db = getFirestore(app)
-export const database = getDatabase(app);
+export const firestore = getFirestore(app)
+// export const database = getDatabase(app);

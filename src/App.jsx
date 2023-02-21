@@ -24,12 +24,14 @@ import { Copyright } from './copyright/components/Copyright';
 
 import { SignIn } from './pages/signin/components/SignIn';
 import { UserInfo } from './userinfo/components/UserInfo';
+import { Admin } from './pages/admin/components/Admin';
 
 function App() {
   const urls = [
     '/',
     '/inscrire',
-    '/connecter'
+    '/connecter',
+    '/admin'
   ]
 
   
@@ -59,6 +61,7 @@ function App() {
 <Route path={urls[0]} element={<Home urls={urls}></Home>}></Route>
 <Route path={urls[1]} element={<SignUp></SignUp>}></Route>
 <Route path={urls[2]} element={<SignIn></SignIn>}></Route>
+<Route path={urls[3]} element={<Admin user={user} ></Admin>}></Route>
     </Routes>
     </div>
 
