@@ -2,7 +2,7 @@
 
 import { createUserWithEmailAndPassword, sendEmailVerification, signInWithEmailAndPassword , signOut  } from "firebase/auth";
 import { auth, firestore } from "../firebase";
-import { doc, setDoc, getDoc } from 'firebase/firestore';
+import { doc, setDoc, getDoc, collection, getDocs } from 'firebase/firestore';
 
 export class UserService {
 
@@ -37,6 +37,12 @@ export class UserService {
     getUser(uid){
         const docRef =  doc(firestore, `users/${uid}`)
         return getDoc(docRef)
+    }
+    getUsers(){
+
+        const colRef = collection(firestore, 'users')
+    
+        return getDocs(colRef)
     }
 
 } 

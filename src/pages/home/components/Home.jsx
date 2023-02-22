@@ -77,7 +77,7 @@ useEffect(() => {
                 <h3 className="u-custom-font u-font-oswald u-text u-text-default u-text-3">Duathlon Sprint</h3>
                 <div className="u-text u-text-default u-text-4">   <ul>
 <li>Duathlon : 5 km course, 24 km vélo, 2.5 km course</li>
-<li>Relais : 1.5 km course, 4  km vélo, 800 m course</li>
+<li>Relais : 5 km course, 24 km vélo, 2.5 km course</li>
 
                     </ul>
                 </div>
@@ -118,7 +118,16 @@ useEffect(() => {
         <div className="u-align-left u-container-align-left u-container-style u-group u-shape-rectangle u-white u-group-1">
           <div className="u-container-layout u-valign-middle u-container-layout-1">
             <h3 className="u-align-left u-text u-text-palette-4-base u-text-2">Tarif d'inscription :</h3>
-            <p className="u-align-left u-text u-text-3">Duathlon Full (600 dh), Relais Full 2 personnes (2900 dh),Relais Full 3 personnes (1200 dh), Duathlon Sprint (350 dh), Relais Sprint 2 personnes (550 dh), Relais Sprint 3 personnes (750 dh), Duathlon Enfants (150 dh)</p>
+            <p className="u-align-left u-text fs-5">
+              <ul>
+                <li>Duathlon Full (600 dh)</li>
+                  <li>Relais Full 2 personnes (2900 dh)</li>
+                  <li>  Relais Full 3 personnes (1200 dh)</li>
+                <li>Duathlon Sprint (350 dh)</li> 
+                <li>Relais Sprint 2 personnes (550 dh)</li> 
+                <li>Relais Sprint 3 personnes (750 dh)</li>
+                <li>Duathlon Enfants (150 dh)</li>
+                </ul></p>
             <NavLink
               to={props.urls[2]}
               className="u-active-white u-align-left u-border-2 u-border-active-palette-4-base u-border-hover-palette-4-base u-border-palette-4-base u-btn u-btn-round u-button-style u-hover-white u-palette-4-base u-radius-50 u-text-active-black u-text-body-alt-color u-text-hover-black u-btn-2"
@@ -142,7 +151,7 @@ useEffect(() => {
         <div className="u-container-layout u-container-layout-1">
           <h2 className="u-text u-text-1"> Mission, Vision, et Valeurs </h2>
           <p className="u-text u-text-2" style={{lineHeight:"1.3em"}}>Pour relever un grand défi de course, l'évènement "Duathlon Tafraout ⴷⵢⴰⵜⵍⵡⵏ ⵜⴰⴼⵔⴰⵡⵜ" offre l’opportunité de courir et faire du vélo entre les montagnes de l'Anti-Atlas du sud, tout en choisissant entre la course full ou relais full de (10 km course, 72 km vélo, 5 km course ) et la course sprint  ou relais sprint de (5 km course, 24 km vélo, 2.5 km course), ainsi la course destinée aux enfants de (1.5 km course, 4  km vélo, 800 m course). <br></br> <br></br>
-    Cet événement cible tout type d’âge, et aura lieu exactement à TAFRAOUT à 250 km d'Agadir et l'une des destinations les plus relaxantes du Maroc. Sa beauté naturelle la rend une ville isolée et paisible.<br></br> <br></br>
+    Cet événement cible tout type d’âge, et aura lieu exactement à TAFRAOUT à 166 km d'Agadir et l'une des destinations les plus relaxantes du Maroc. Sa beauté naturelle la rend une ville isolée et paisible.<br></br> <br></br>
      L'expérience duathlon tafraout offre à ses athlètes  et audiences une nuée d’animations, une aventure authentique,  et un éventail d’activités incroyablement large.
           </p>
           <NavLink
@@ -163,7 +172,7 @@ useEffect(() => {
             <div className="u-container-align-center u-container-style u-list-item u-palette-4-base u-repeater-item u-list-item-1">
               <div className="u-container-layout u-similar-container u-container-layout-1">
                 <h5 className="u-align-center u-custom-item u-text u-text-1" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">Nombre de participants</h5>
-                <p className="u-align-center u-custom-item u-text u-text-2"><br/>  <span className='fs-3 fw-bold'> + 234 </span>
+                <p className="u-align-center u-custom-item u-text u-text-2"><br/>  <span className='fs-3 fw-bold'> + 500 </span>
                 </p>
               </div>
             </div>
