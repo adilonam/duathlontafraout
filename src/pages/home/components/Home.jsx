@@ -3,11 +3,13 @@ import { Carousel } from 'primereact/carousel';
 import { Button } from 'primereact/button';
 import { useEffect, useState } from 'react';
 import '../assets/home.css'  
+import '../assets/countdown.css'  
 import { firestore } from '../../../firebase';
 import { NavLink } from 'react-router-dom';
 import { doc, setDoc } from 'firebase/firestore';
 import { set } from 'firebase/database';
- 
+import { CountDown } from './CountDown';
+
 export const Home = (props)=> {
  
  
@@ -28,11 +30,10 @@ useEffect(() => {
 
   return (
     <>
-
-  
+<CountDown></CountDown>
  
     
-<section className="u-align-left u-clearfix u-image u-section-1" src="" id="carousel_04c3">
+{/* <section className="u-align-left u-clearfix u-image u-section-1 u-section-present-1" src="" id="carousel_04c3">
       <div className="u-clearfix u-sheet u-sheet-1">
         <div className="u-align-left u-container-style u-expanded-width-sm u-expanded-width-xs u-group u-white u-group-1" style={{marginTop:"17em"}}>
           <div className="u-container-layout u-valign-middle u-container-layout-1">
@@ -52,7 +53,7 @@ useEffect(() => {
           </div>
         </div>
       </div>
-    </section>
+    </section> */}
     <section className="u-clearfix u-palette-4-base u-section-2" id="carousel_a285">
       <div className="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <div className="u-expanded-width u-list u-list-1">
