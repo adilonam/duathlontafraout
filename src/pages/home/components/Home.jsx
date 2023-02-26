@@ -37,7 +37,7 @@ useEffect(() => {
            
 
             <NavLink
-              to={props.urls[2]}
+              to={props.urls[1]}
               className="u-active-white u-align-left u-border-2 u-border-active-palette-4-base u-border-hover-palette-4-base u-border-palette-4-base u-btn u-btn-round u-button-style u-hover-white u-palette-4-base u-radius-50 u-text-active-black u-text-body-alt-color u-text-hover-black u-btn-2"
              
              >
@@ -126,7 +126,7 @@ useEffect(() => {
                 <li>Duathlon Enfants (150 dh)</li>
                 </ul> 
             <NavLink
-              to={props.urls[2]}
+              to={props.urls[1]}
               className="u-active-white u-align-left u-border-2 u-border-active-palette-4-base u-border-hover-palette-4-base u-border-palette-4-base u-btn u-btn-round u-button-style u-hover-white u-palette-4-base u-radius-50 u-text-active-black u-text-body-alt-color u-text-hover-black u-btn-2"
              
              >
@@ -152,7 +152,7 @@ useEffect(() => {
      L'expérience duathlon tafraout offre à ses athlètes  et audiences une nuée d’animations, une aventure authentique,  et un éventail d’activités incroyablement large.
           </p>
           <NavLink
-              to={props.urls[2]}
+              to={props.urls[1]}
               className="u-active-white u-align-left u-border-2 u-border-active-palette-4-base u-border-hover-palette-4-base u-border-palette-4-base u-btn u-btn-round u-button-style u-hover-white u-palette-4-base u-radius-50 u-text-active-black u-text-body-alt-color u-text-hover-black u-btn-2"
              
              >

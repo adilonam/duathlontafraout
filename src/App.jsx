@@ -56,7 +56,7 @@ function App() {
   return (<>
 
     <NavBar urls={urls} user={user} ></NavBar>
-<div className=''>
+
 { user && 
    <UserInfo user={user}></UserInfo>
 
@@ -67,7 +67,7 @@ function App() {
 <Route path={urls[2]} element={<SignIn></SignIn>}></Route>
 <Route path={urls[3]} element={<Admin user={user} ></Admin>}></Route>
     </Routes>
-    </div>
+   
 
 
 
