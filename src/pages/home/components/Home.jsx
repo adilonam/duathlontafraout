@@ -1,13 +1,8 @@
 
-import { Carousel } from 'primereact/carousel';
-import { Button } from 'primereact/button';
 import { useEffect, useState } from 'react';
-import '../assets/home.css'  
-import '../assets/countdown.css'  
-import { firestore } from '../../../firebase';
+import '../assets/home.scss'  
+ 
 import { NavLink } from 'react-router-dom';
-import { doc, setDoc } from 'firebase/firestore';
-import { set } from 'firebase/database';
 import { CountDown } from './CountDown';
 
 export const Home = (props)=> {
@@ -46,7 +41,7 @@ useEffect(() => {
               className="u-active-white u-align-left u-border-2 u-border-active-palette-4-base u-border-hover-palette-4-base u-border-palette-4-base u-btn u-btn-round u-button-style u-hover-white u-palette-4-base u-radius-50 u-text-active-black u-text-body-alt-color u-text-hover-black u-btn-2"
              
              >
-                Participer maintenant
+                S'inscrire
             </NavLink>
           
        
@@ -64,7 +59,7 @@ useEffect(() => {
                 <h3 className="u-custom-font u-font-oswald u-text u-text-default u-text-1">Duathlon Full</h3>
                 <div className="u-text u-text-default u-text-2">
                     <ul>
-<li>Duathlon : 10 km course, 72 km vélo, 5 km course</li>
+<li>Individuel : 10 km course, 72 km vélo, 5 km course</li>
 <li>Relais : 10 km course, 72 km vélo, 5 km course</li>
 
                     </ul>
@@ -77,7 +72,7 @@ useEffect(() => {
                 <img alt="" className="u-expanded-width u-image u-image-default u-image-2" data-image-width="1380" data-image-height="920" src="/images/duathlon-14.jpg"/>
                 <h3 className="u-custom-font u-font-oswald u-text u-text-default u-text-3">Duathlon Sprint</h3>
                 <div className="u-text u-text-default u-text-4">   <ul>
-<li>Duathlon : 5 km course, 24 km vélo, 2.5 km course</li>
+<li>Individuel : 5 km course, 24 km vélo, 2.5 km course</li>
 <li>Relais : 5 km course, 24 km vélo, 2.5 km course</li>
 
                     </ul>
@@ -119,8 +114,9 @@ useEffect(() => {
         <div className="u-align-left u-container-align-left u-container-style u-group u-shape-rectangle u-white u-group-1">
           <div className="u-container-layout u-valign-middle u-container-layout-1">
             <h3 className="u-align-left u-text u-text-palette-4-base u-text-2">Tarif d'inscription :</h3>
-            <p className="u-align-left u-text fs-5">
-              <ul>
+ 
+ 
+              <ul className="u-align-left u-text fs-5">
                 <li>Duathlon Full (600 dh)</li>
                   <li>Relais Full 2 personnes (2900 dh)</li>
                   <li>  Relais Full 3 personnes (1200 dh)</li>
@@ -128,13 +124,13 @@ useEffect(() => {
                 <li>Relais Sprint 2 personnes (550 dh)</li> 
                 <li>Relais Sprint 3 personnes (750 dh)</li>
                 <li>Duathlon Enfants (150 dh)</li>
-                </ul></p>
+                </ul> 
             <NavLink
               to={props.urls[2]}
               className="u-active-white u-align-left u-border-2 u-border-active-palette-4-base u-border-hover-palette-4-base u-border-palette-4-base u-btn u-btn-round u-button-style u-hover-white u-palette-4-base u-radius-50 u-text-active-black u-text-body-alt-color u-text-hover-black u-btn-2"
              
              >
-                Participer maintenant
+                S'inscrire
             </NavLink>
         
           </div>
@@ -160,7 +156,7 @@ useEffect(() => {
               className="u-active-white u-align-left u-border-2 u-border-active-palette-4-base u-border-hover-palette-4-base u-border-palette-4-base u-btn u-btn-round u-button-style u-hover-white u-palette-4-base u-radius-50 u-text-active-black u-text-body-alt-color u-text-hover-black u-btn-2"
              
              >
-                Participer maintenant
+                S'inscrire
             </NavLink>
         </div>
       </div>
@@ -181,7 +177,9 @@ useEffect(() => {
               <div className="u-container-layout u-similar-container u-container-layout-2">
                 <h5 className="u-align-center u-custom-item u-text u-text-3" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">Date/Lieu :</h5>
                 <p className="u-align-center u-custom-item u-text u-text-4">
-                  <span style={{"fontWeight": "700"}} className="mt-5"> Le 6-7 mai 2023 à Tafraout </span>
+                  <br />
+                  <span style={{"fontWeight": "700"}} className="mt-5"> Le 6-7 mai 2023 </span><br></br>
+                  <span style={{"fontWeight": "700"}} className="mt-5">📍 Tafraout </span>
                 
                 </p>
               </div>
@@ -192,7 +190,7 @@ useEffect(() => {
                 <p className="u-align-center u-custom-item u-text u-text-6">
                
                   <br/>
-                  <span style={{"fontWeight": "700"}} className="">contact@duathlontafraout.com</span>
+                  <span style={{"fontWeight": "700"}} className="">contact-duathlontafraout@gmail.com</span>
                   <br/>
             
                 </p>

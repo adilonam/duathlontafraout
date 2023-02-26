@@ -25,13 +25,17 @@ import { Copyright } from './copyright/components/Copyright';
 import { SignIn } from './pages/signin/components/SignIn';
 import { UserInfo } from './userinfo/components/UserInfo';
 import { Admin } from './pages/admin/components/Admin';
+import { Footer } from './footer/components/Footer';
 
 function App() {
   const urls = [
     '/',
     '/inscrire',
     '/connecter',
-    '/admin'
+    '/admin',
+    '/sponsor',
+    '/media',
+    '/contact'
   ]
 
   
@@ -67,7 +71,7 @@ function App() {
 
 
 
-    <Copyright></Copyright>
+   <Footer></Footer>
   </>
  
   )

@@ -71,6 +71,44 @@ export const NavBar = (props) => {
       </li></>
 )
       }
+
+      <li className="u-nav-item">
+      <NavLink
+        to={props.urls[4]}
+        className="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
+       
+        style={{ padding: "10px 20px" }}>
+          Sponsor
+      </NavLink>
+
+    </li>
+
+    <li className="u-nav-item">
+      <NavLink
+        to={props.urls[5]}
+        className="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
+       
+        style={{ padding: "10px 20px" }}>
+          Media
+      </NavLink>
+
+    </li>
+
+
+    <li className="u-nav-item">
+      <NavLink
+        to={props.urls[6]}
+        className="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
+       
+        style={{ padding: "10px 20px" }}>
+          Contact
+      </NavLink>
+
+    </li>
+
+
+
+      
       </ul>
   </div>
   <div className="u-nav-container-collapse">
@@ -97,7 +135,9 @@ export const NavBar = (props) => {
         style={{ padding: "10px 20px" }}>
           S'inscrire
       </NavLink>
-          </li><li className="u-nav-item"><NavLink
+          </li>
+          
+          <li className="u-nav-item"><NavLink
         to={props.urls[2]}
         className="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
        
@@ -107,6 +147,34 @@ export const NavBar = (props) => {
           </li>
           </>
           }
+
+<li className="u-nav-item"><NavLink
+        to={props.urls[4]}
+        className="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
+       
+        style={{ padding: "10px 20px" }}>
+         Sponsor
+      </NavLink>
+          </li>
+
+          <li className="u-nav-item"><NavLink
+        to={props.urls[5]}
+        className="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
+       
+        style={{ padding: "10px 20px" }}>
+          Media
+      </NavLink>
+          </li>
+
+          <li className="u-nav-item"><NavLink
+        to={props.urls[6]}
+        className="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
+       
+        style={{ padding: "10px 20px" }}>
+          Contact
+      </NavLink>
+          </li>
+
           </ul>
       </div>
     </div>

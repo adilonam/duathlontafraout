@@ -96,7 +96,7 @@ const getFormErrorMessage = (name) => {
                         value={formik.values.password}
                         className={classNames({ 'p-invalid': isFormFieldInvalid('password'), "flex-column p-0" :true })}/>
                     </div>
-                    <Button loading={loading} label="Login" icon="pi pi-user" type="submit" className="w-10rem mt-3" ></Button>
+                    <Button loading={loading} label="Se connecter" icon="pi pi-user" type="submit" className="w-10rem mt-3" ></Button>
                 </form>
                 <div className="w-full md:w-2 col">
                     <Divider layout="vertical" className="hidden md:flex"><b>OR</b></Divider>
@@ -106,7 +106,7 @@ const getFormErrorMessage = (name) => {
                 <Link
                 to="/inscrire"
                         className="btn"
-              >  <Button label="Sign Up"  icon="pi pi-user-plus" className="p-button-success w-10rem"></Button>
+              >  <Button label="S'inscrire"  icon="pi pi-user-plus" className="p-button-success w-10rem"></Button>
               </Link>
                   
                 </div>

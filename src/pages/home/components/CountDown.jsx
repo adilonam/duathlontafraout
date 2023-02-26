@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
-
+import '../assets/countdown.scss'  
 
 
 
@@ -92,8 +92,8 @@ export const CountDown = (props)=>{
 
       <Link
                 to="/inscrire"
-                    
-              >   <a  className=" d-inline-block u-active-white u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xl u-border-2 u-border-active-white u-border-hover-white u-border-white u-btn u-btn-round u-button-style u-hover-white u-none u-radius-8 u-btn-2">S'INSCRIRE</a>
+                className=" d-inline-block u-active-white u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xl u-border-2 u-border-active-white u-border-hover-white u-border-white u-btn u-btn-round u-button-style u-hover-white u-none u-radius-8 u-btn-2"
+              >  S'INSCRIRE
               </Link>
     
     
