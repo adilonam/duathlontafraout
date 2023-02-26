@@ -9,7 +9,7 @@ import { Password } from 'primereact/password';
 import { UserService } from "../../../services/UserService";
 import { useNavigate } from "react-router-dom";
 import { Dropdown } from 'primereact/dropdown';
-import { pays , tshirts, typeduathlons} from "../assets/Data";
+import { pays , tshirts, typeduathlons, sexes} from "../assets/Data";
 import { Calendar } from 'primereact/calendar';
 
 export const SignUp = (props) => {
@@ -102,7 +102,7 @@ export const SignUp = (props) => {
         autoComplete={field == "email" ? "username" : ""}
         type={field == "email" ? "email" : "text"}
       />
-      <label htmlFor={name}>{label}</label>   </span>
+      <label htmlFor={field}>{label}</label>   </span>
       {getFormErrorMessage(field)}
     </>
 
@@ -115,8 +115,9 @@ export const SignUp = (props) => {
   const customDropDown = (field, label, options, optionLabel = "name")=>{
     return(
       <>
-    <Dropdown  className='mt-4 w-75' value={formik.values[field]} onChange={(e) =>  formik.setFieldValue(field, e.value)} options={options} optionLabel={optionLabel} placeholder={label} optionValue={optionLabel}/>
-
+      <span className="p-float-label mt-4">
+    <Dropdown  className='w-75' value={formik.values[field]} onChange={(e) =>  formik.setFieldValue(field, e.value)} options={options} optionLabel={optionLabel}  optionValue={optionLabel}/>
+    <label htmlFor={field}>{label}</label>   </span>
     <span className="d-block">
     {getFormErrorMessage(field)}
     </span>
@@ -143,17 +144,18 @@ export const SignUp = (props) => {
               {customDropDown("tshirt", "T-shirt", tshirts)}
               {customDropDown("typeduathlon", "Type Duathlon", typeduathlons)}
             
-          
+              {customDropDown("sexe", "Sexe", sexes)}
             </div>
 
             <div className="col">
+         
             {customDropDown("pays", "Pays", pays)}
               {customInputText("ville", "Ville")}
               {customInputText("cin", "C.I.N")}
 
-              <Calendar value={formik.values.datenaissance} onChange={(e) =>  formik.setFieldValue("datenaissance", e.value)} showIcon  className="mt-4 w-75" placeholder="Date Naissance"/>
+              <Calendar value={formik.values.datenaissance} onChange={(e) =>  formik.setFieldValue("datenaissance", e.value)} showIcon  className="mt-5 w-75" placeholder="Date Naissance"/>
               <>
-                <span className="p-float-label mt-4">
+                <span className="p-float-label mt-5">
                   <Password value={formik.values.password1} onChange={(e) => {
                     formik.setFieldValue("password1", e.target.value)
                   }}

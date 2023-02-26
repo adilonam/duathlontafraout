@@ -282,3 +282,11 @@ export const typeduathlons = [
   { name: 'duathlon enfants' },
 
 ];
+
+
+export const sexes = [
+  { name: 'Homme' },
+  { name: 'Femme' },
+
+
+];

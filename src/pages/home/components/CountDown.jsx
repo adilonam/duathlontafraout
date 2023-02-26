@@ -57,7 +57,7 @@ export const CountDown = (props)=>{
        
           <div className="  u-countdown-item u-radius-22 u-spacing-10 u-white u-countdown-item-2 ms-3 mt-2 col-md col-5">
             <div className="u-countdown-counter u-countdown-counter-2"><div className="u-countdown-number u-text-grey-75 px-5">{timeLeft.days}</div></div>
-            <div className="u-countdown-label u-countdown-label-2">Days</div>
+            <div className="u-countdown-label u-countdown-label-2">Jours</div>
           </div>
 
 
@@ -65,7 +65,7 @@ export const CountDown = (props)=>{
         
           <div className=" ms-3 u-countdown-item u-radius-22 u-spacing-10 u-white u-countdown-item-3 mt-2  col-md col-5">
             <div className="u-countdown-counter u-countdown-counter-3"><div className="u-countdown-number u-text-grey-75 px-5">{timeLeft.hours}</div></div>
-            <div className="u-countdown-label u-countdown-label-3">Hours</div>
+            <div className="u-countdown-label u-countdown-label-3">Heures</div>
           </div>
          
           
@@ -80,7 +80,7 @@ export const CountDown = (props)=>{
             <div className="u-countdown-counter u-countdown-counter-5">
             
                 <div className="u-countdown-number u-text-grey-75 px-5">{timeLeft.seconds}</div></div>
-            <div className="u-countdown-label u-countdown-label-5">Seconds</div>
+            <div className="u-countdown-label u-countdown-label-5">Secondes</div>
           </div>
           
        
