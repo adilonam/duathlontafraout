@@ -12,9 +12,7 @@ export class UserService {
             let _data = {...data}
             delete _data.password1
             delete _data.password2
-
             const docRef =   doc(firestore,`users/${ userCredential.user.uid}`);
-
             setDoc(docRef,_data).then((d)=>sendEmailVerification(userCredential.user,{url:import.meta.env.VITE_DOMAIN}))
        
 
